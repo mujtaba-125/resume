@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: grey;">
+    <div id="main2_bg">
+    <form id="main_form" action="">
+        <h1 style="color: rgb(112, 112, 112); display:flex; justify-content:center;" >Dynamic Resume Builder</h1>
+        <fieldset>
+            <legend class="main">username</legend>
+            <input type="text" id="username" placeholder="username" required><br><br>
+
+            <legend>Personal information</legend><br><br>
+            <label for="upload_photo">Upload Photo</label>
+            <input type="file" id="upload_photo" name="upload_photo" required>
+            <br><br>
+
+            <label for="full_name ">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" required>
+
+            <label for="email">Email: </label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="phone">Phone: </label>
+            <input type="tel" id="phone" name="phone" required>
+        </fieldset>
+        <fieldset>
+            <legend class="main">Education</legend>
+            <label for="text">Detail about acadamic career</label>
+            <textarea name="education" id="education" cols="30" rows="10"></textarea>
+
+            <label for="text">School:</label>
+            <input type="text" id="school" name="school" required>
+
+            <label for="College">College</label>
+            <input type="text" id="college" name="college" >
+
+            <label for="University">University</label>
+            <input type="text" id="university" name="university" >
+        </fieldset>
+        <fieldset>
+            <legend class="main">Experience</legend>
+            <label for="text">Detail about work experience</label>
+            <textarea name="experience" id="experience" cols="30" rows="10"></textarea>
+
+            <label for="text">Company:</label>
+            <input type="text" id="company" name="company" >
+
+            <label for="position">Position</label>
+            <input type="text" id="position" name="position" >
+            <p style="color: rgb(233, 154, 0);font-weight:bold;">For Fresher</p>
+            <textarea name="projects" id="fresher">Give the detaied about projects</textarea>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend class="main">Skills</legend>
+            <label for="text">Detail about skills</label>
+            <textarea name="skills" id="skills" cols="30" rows="10"></textarea>
+            <!-- <p style="color:#707070;">According to our requirement which section you prefer <br> to hired in, make choice according to the skills you have: </p> -->
+
+            <!-- <input class="ck" type="checkbox" name="skill" id="FD" value="FD">
+            <label for="FD" class="ck">Frontend Developer</label>
+
+            <input class="ck" type="checkbox" name="skill" id="BD" value="BD">
+            <label for="BD" class="ck">Backend Developer</label>
+            
+
+            <input class="ck" type="checkbox" name="skill" id="DS" value="DS">
+            <label for="DS" class="ck">Data Scientist</label>
+            
+
+            <input type="checkbox" name="skill" id="Python" value="Python">
+            <label class="ck" for="PD">Python Developer</label> 
+
+            <input class="ck" type="checkbox" name="skill" id="DA" value="DA">
+            <label class="ck" for="DA" class="ck">Data Analyst</label> -->
+            
+            
+        </fieldset>
+
+        <button type="submit" id="btn">Generate Form</button>
+    </form>
+</div>
+
+
+<div id="resume_page" class="resum-page hidden">
+    <div id="resume_content" class="resume_contents">
+        <img id="resumephoto" class="resumephoto" src="" alt="">
+        <h1 id="ResumeUserName"></h1>
+        <p id="ResumeEmail"></p>
+        <p id="ResumePhone"></p>
+
+        <h2>Education</h2>
+        <p id="resumeEducation"></p>
+        <p id="resumeschool"></p>
+        <p id="resumecollege"></p>
+        <p id="resumeuniversity"></p>
+
+        <h2>Work Experience</h2>
+        <p id="ResumeWorkExperience"></p>
+        <p id="ResumeCompany"></p>
+        <p id="ResumePosition"></p>
+        <p id="ResumeProjects"></p>
+        
+
+        <h2>Skills</h2>
+        <p id="ResumeSkills"></p>
+        <!-- <p id="Frontend"></p>
+        <p id="Backend"></p>
+        <p id="Dataanalyst"></p>
+        <p id="Pyton"></p>
+        <p id="DataScientist"></p> -->
+    </div>
+
+    <button id="editButton" class="button">Edit</button>
+    <button id="backbutton" onclick="window.location.href='index.html'" class="button">Back To Form</button>
+    <button id="sharelinkbutton" class="button">Share Your Resume</button>
+    <button id="downloadbutton" class="button">Download Resume</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script src="main.js"></script>
+</body>
+</html>
